@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://theaddonarchitect.github.io/sitemap.xml
