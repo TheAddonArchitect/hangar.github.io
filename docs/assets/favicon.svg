@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1280 1280" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Hangar cyan app icon</title>
+  <desc id="desc">A cyan hangar doorway surrounding an aircraft silhouette on a rounded navy tile, with transparency outside the tile.</desc>
+  <defs>
+    <linearGradient id="tile" x1="190" y1="110" x2="1050" y2="1150" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#104F75"/>
+      <stop offset=".3" stop-color="#082B45"/>
+      <stop offset=".72" stop-color="#051B2D"/>
+      <stop offset="1" stop-color="#03111F"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="500" y1="90" x2="750" y2="1180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#36ECFA"/>
+      <stop offset=".27" stop-color="#02CEE9"/>
+      <stop offset=".7" stop-color="#00A9CF"/>
+      <stop offset="1" stop-color="#007A9E"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="450" y1="280" x2="940" y2="930" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4DF5F6"/>
+      <stop offset=".45" stop-color="#1DE5F1"/>
+      <stop offset="1" stop-color="#05C9E6"/>
+    </linearGradient>
+    <linearGradient id="leftBevel" x1="275" y1="490" x2="610" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#008BAF"/>
+      <stop offset="1" stop-color="#08B6D2"/>
+    </linearGradient>
+    <linearGradient id="rightBevel" x1="640" y1="365" x2="1000" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#007C9C"/>
+      <stop offset="1" stop-color="#00B8D7"/>
+    </linearGradient>
+    <linearGradient id="aircraft" x1="495" y1="468" x2="795" y2="918" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#50F4F4"/>
+      <stop offset=".5" stop-color="#21E8F2"/>
+      <stop offset="1" stop-color="#05CDE9"/>
+    </linearGradient>
+  </defs>
+  <!-- All visible artwork is vector geometry. No embedded raster image. -->
+  <rect x="73" y="94" width="1114" height="1074" rx="200" fill="url(#tile)" stroke="#003D5D" stroke-width="27"/>
+  <rect x="76" y="97" width="1108" height="1068" rx="197" stroke="url(#rim)" stroke-width="20"/>
+  <rect x="88" y="109" width="1084" height="1044" rx="185" stroke="#4ADFF3" stroke-opacity=".4" stroke-width="2"/>
+  <!-- Outer cyan hangar and recessed doorway bevels. -->
+  <path d="M180 480Q180 471 190 466L619 248Q627 244 635 248L1065 467Q1074 471 1074 480V938H984V522L627 350 270 522V938H180V480Z" fill="url(#cyan)"/>
+  <path d="M270 522 627 350V401L313 551V910L270 938V522Z" fill="url(#leftBevel)"/>
+  <path d="M627 350 984 522V938L941 910V551L627 401V350Z" fill="url(#rightBevel)"/>
+  <path d="M184 477 623 250Q627 248 632 250L1068 474" stroke="#8DFBFA" stroke-opacity=".65" stroke-width="2"/>
+  <!-- Single aircraft silhouette, pointing upward. -->
+  <path d="M627 459C616 459 591 507 586 553L584 612Q584 623 574 630L528 659V640Q528 628 516 628H498Q486 628 486 640V685L360 751Q349 757 349 770V794L580 723Q591 719 593 732L604 820Q605 827 598 831L518 877Q510 881 510 891V907L615 884 627 920 639 884 744 907V891Q744 881 736 877L656 831Q649 827 650 820L661 732Q663 719 674 723L905 794V770Q905 757 894 751L768 685V640Q768 628 756 628H738Q726 628 726 640V659L680 630Q670 623 670 612L668 553C663 507 638 459 627 459Z" fill="url(#aircraft)" stroke="#52F6F8" stroke-width="1.5" stroke-linejoin="round"/>
+</svg>
