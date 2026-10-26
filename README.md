@@ -1,52 +1,154 @@
-# Hangar — GitHub Pages website
+Hangar
 
-A static, responsive website prepared for https://theaddonarchitect.github.io/ and the repository https://github.com/TheAddonArchitect/TheAddonArchitect.github.io.
+**Your flight simulation companion.**
 
-## Publish with the included GitHub Actions workflow (recommended)
+One workspace for your library, flight preparation, and simulator setup.
 
-1. Extract this package. Copy the **contents** of `Hangar-GitHub-Pages` into the repository root. Keep `docs/`, `README.md`, and `.github/` at the root; do not add another enclosing folder. Commit to `main`. Include the hidden `.github/` folder when uploading.
-2. Open repository **Settings → Pages**. Under **Build and deployment**, choose **GitHub Actions**.
-3. Open **Actions → Publish Hangar website → Run workflow**, selecting `main`. Future pushes changing `docs/` will publish automatically.
-4. Wait for the deployment to succeed. GitHub will show the published URL: https://theaddonarchitect.github.io/.
+[Website](https://theaddonarchitect.github.io/) · [Flight Manual](https://theaddonarchitect.github.io/guide.html) · [Releases](https://github.com/TheAddonArchitect/TheAddonArchitect.github.io/releases) · [Website Feedback](https://github.com/TheAddonArchitect/TheAddonArchitect.github.io/issues)
 
-The website itself is plain HTML/CSS/JavaScript: no installation, build service, API keys or backend. GitHub's repository/account eligibility and workflow permission rules apply. Only `docs/` is published. The `.nojekyll` file avoids Jekyll processing.
+</div>
 
-## Alternative: publish directly from a branch
+![An airliner inside a hangar at blue hour](docs/assets/hangar-hero.webp)
 
-You may omit `.github/workflows/pages.yml` and upload `docs/` plus the README. In **Settings → Pages**, choose **Deploy from a branch → main → /docs → Save**. Use this alternative if you prefer no workflow file. Choose one publishing method; do not use both simultaneously.
+## Overview
 
-Official GitHub instructions:
-- https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
-- https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
+Hangar brings **Microsoft Flight Simulator add-on management, flight preparation, scenery discovery, and live aircraft tracking** into one Windows desktop companion.
 
-## Content and links
+This repository contains the **Hangar product website** hosted on GitHub Pages. The website introduces the application, explains its requirements, and provides a searchable flight manual. It does not include the Windows application or Microsoft runtime files.
 
-- `docs/index.html`: landing page, feature explorer, workflow, FAQs, release links.
-- `docs/guide.html`: flight manual based on reviewed Hangar 0.7.0 project documentation.
-- `docs/site-privacy.html`: this static website's data practices, separate from the desktop app privacy policy.
-- `docs/404.html`: custom missing-page screen.
-- `docs/assets/styles.css`: responsive styling, system fonts, reduced-motion support.
-- `docs/assets/site.js`: accessible tabs, mobile navigation, current year. No tracking or persistence.
-- `docs/assets/hangar-hero.webp`: optimized generated background, 1280 × 640.
-- `docs/assets/hangar-hero.png`: original supplied background, 1280 × 640, used for the social preview.
-- `docs/assets/favicon.svg`: original simple hangar-shaped site mark, not an established trademark claim.
+### What the website includes
 
-The interface illustration is explicitly labeled illustrative and uses example content. It is not an app screenshot. Logbook and virtual airline functionality are labeled planned, matching the reviewed source. Check the manual and claims whenever the application changes.
+- **Product overview** — an aviation-themed introduction and interactive workspace illustrations.
+- **Capabilities** — library organization, profiles, activation, flight preparation, scenery, weather, and tracking.
+- **Setup guidance** — system requirements, external connections, and a preflight workflow.
+- **Documentation** — a searchable flight manual, FAQs, and troubleshooting guidance.
+- **Responsive design** — desktop and mobile layouts, keyboard-accessible controls, and reduced-motion support.
 
-Release buttons point to this repository's `/releases` page. They do not claim an installer is already uploaded. If application releases live in a different repository, update those links in `docs/index.html`. Attach only authorized, tested app artifacts to an actual GitHub release; this site package does not include the Windows app or Microsoft runtime files.
+> **Feature scope:** Application information reflects the reviewed **Hangar 0.7.0** source and documentation. This is not a statement that 0.7.0 is the latest public release. Logbooks, landing statistics, and virtual airline integrations are identified as planned concepts.
 
-The repository link is not a declaration that Hangar's application code is open-source. No application license is assigned by this website package. Desktop legal policies from the earlier draft are intentionally not published as effective legal terms: publisher identity, privacy/security contacts, licensing and legal review remain pending.
+## Quick navigation
 
-## Local preview
+[Publish the website](#publish-the-website) · [Preview locally](#preview-locally) · [Project structure](#project-structure) · [Update the website](#update-the-website) · [Product and licensing notes](#product-and-licensing-notes)
 
-From the repository root:
+## Publish the website
 
-    python -m http.server 8787 --directory docs
+### Option 1 · GitHub Actions — recommended
 
-Open http://localhost:8787/ in your browser. You may also open `docs/index.html` directly for a basic offline preview.
+1. **Upload the website files.** Copy the contents of the extracted `Hangar-GitHub-Pages` folder into the repository root. Keep `docs/`, `README.md`, and `.github/` at that level, then commit to `main`.
+2. **Choose the publishing source.** Open **Settings → Pages**. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+3. **Run the workflow.** Open **Actions → Publish Hangar website → Run workflow** and select `main`.
+4. **Check the deployment.** After a successful run, the website will be available at [theaddonarchitect.github.io](https://theaddonarchitect.github.io/).
 
-## Update the site
+Future pushes that change files under `docs/` trigger the included workflow automatically. The workflow publishes **only `docs/`**.
 
-Edit files under `docs/`, then commit them to `main`. Changes to the README do not affect the visible page. No third-party fonts or JavaScript CDNs are used. External GitHub links follow GitHub's own privacy practices.
+> **Upload tip:** Include the hidden `.github/` folder. Upload the extracted contents, not the ZIP file or an extra enclosing folder.
 
-The canonical, social and sitemap URLs target the root of TheAddonArchitect.github.io. If moving to a project subdirectory or custom domain, update those URLs, `docs/404.html`, and `docs/robots.txt` accordingly. Do not add a CNAME unless you own and configure the corresponding domain.
+### Option 2 · Deploy from a branch
+
+For a simpler setup without a custom workflow:
+
+1. Omit `.github/workflows/pages.yml` from the repository.
+2. Upload `docs/` and `README.md` to the `main` branch.
+3. Open **Settings → Pages**.
+4. Choose **Deploy from a branch → main → /docs → Save**.
+
+**Choose one publishing method.** If switching methods, update the Pages source and remove or disable the unused custom workflow.
+
+The site uses **plain HTML, CSS, and JavaScript**. It needs no dependency installation, compilation, backend, database, or API keys. GitHub Pages eligibility and deployment permissions still apply. The included `.nojekyll` file bypasses Jekyll processing.
+
+**Official documentation:** [Configure a publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) · [Use a custom workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
+
+## Preview locally
+
+From the repository root, run:
+
+```sh
+python -m http.server 8787 --directory docs
+```
+
+Open [localhost:8787](http://localhost:8787/) in your browser. Press **Ctrl+C** in the terminal to stop the server.
+
+You can also open `docs/index.html` directly for a basic offline preview. External links still require an internet connection.
+
+## Project structure
+
+```text
+.
+├── .github/
+│   └── workflows/
+│       └── pages.yml           # Optional GitHub Actions deployment
+├── docs/                       # Published website
+│   ├── assets/
+│   │   ├── favicon.svg
+│   │   ├── hangar-hero.webp
+│   │   ├── hangar-hero.png
+│   │   ├── site.js
+│   │   └── styles.css
+│   ├── .nojekyll
+│   ├── index.html
+│   ├── guide.html
+│   ├── site-privacy.html
+│   ├── 404.html
+│   ├── robots.txt
+│   └── sitemap.xml
+├── README.md
+└── VERIFICATION.md
+```
+
+| File | Purpose |
+| --- | --- |
+| [`docs/index.html`](docs/index.html) | Landing page, capability explorer, requirements, workflow, FAQs, and release links. |
+| [`docs/guide.html`](docs/guide.html) | Searchable flight manual based on the reviewed 0.7.0 documentation. |
+| [`docs/site-privacy.html`](docs/site-privacy.html) | Website privacy information, separate from the desktop application's policy. |
+| [`docs/404.html`](docs/404.html) | Custom missing-page screen. |
+| [`docs/assets/styles.css`](docs/assets/styles.css) | Layout, typography, responsive behavior, and reduced-motion styling. |
+| [`docs/assets/site.js`](docs/assets/site.js) | Feature tabs, mobile navigation, manual search, and current-year display. |
+| [`docs/assets/hangar-hero.webp`](docs/assets/hangar-hero.webp) | Optimized **1280 × 640 px** website background. |
+| [`docs/assets/hangar-hero.png`](docs/assets/hangar-hero.png) | Original **1280 × 640 px** image used for social previews. |
+| [`VERIFICATION.md`](VERIFICATION.md) | Recorded checks and verification limits. |
+
+## Update the website
+
+1. Edit the relevant files under `docs/`.
+2. Preview the changes and check navigation, text, and layouts.
+3. Commit to `main`; the selected publishing method handles deployment.
+
+Changes to this README affect the repository presentation, **not the public website**.
+
+### Content and release links
+
+- Keep capability descriptions and manual instructions aligned with the application.
+- Clearly distinguish **implemented features**, **setup requirements**, and **planned concepts**.
+- Workspace illustrations use example content and are labeled accordingly; they are not application screenshots.
+- Release buttons currently point to this repository's [Releases page](https://github.com/TheAddonArchitect/TheAddonArchitect.github.io/releases). Update the release links throughout `docs/` if application downloads are hosted elsewhere.
+- Publish only authorized, tested application artifacts. The website does not claim that an installer is already available.
+
+### Typography and assets
+
+The website uses **system fonts**, locally hosted imagery, and local scripts. It does not load third-party font or JavaScript CDNs. Its own code includes no analytics, advertising trackers, or persistent browser storage. GitHub hosting and external links follow their providers' privacy practices.
+
+GitHub controls the README's font family and exact type sizes. This file uses native Markdown headings, bold text, tables, and code blocks for consistent rendering on GitHub.
+
+### Domain changes
+
+Canonical URLs, social previews, the sitemap, and the custom 404 page target:
+
+```text
+https://theaddonarchitect.github.io/
+```
+
+If moving to a custom domain or project subdirectory, review URLs in `docs/index.html`, `docs/404.html`, `docs/robots.txt`, and `docs/sitemap.xml`, along with any other absolute links. Add a `CNAME` only when you own and have configured the corresponding domain.
+
+## Product and licensing notes
+
+- **Independent product.** Hangar is not affiliated with Microsoft, Valve, or Navigraph.
+- **Simulation use.** Routes, weather, maps, and telemetry are for flight simulation and entertainment, not real-world aviation decisions.
+- **Application licensing.** Hosting this website repository does not make Hangar's desktop application open-source or grant an application license.
+- **Legal documents.** Draft desktop policies are not published as effective agreements. Publisher details, contact channels, licensing decisions, and review remain outstanding.
+- **Product claims.** This website does not promise enterprise security certifications, service-level agreements, team accounts, or cloud synchronization.
+
+For ordinary website problems, use [Website Feedback](https://github.com/TheAddonArchitect/TheAddonArchitect.github.io/issues). **Do not post credentials, private files, or security vulnerability details in public issues.**
+
+---
+
+**The Addon Architect** · Hangar website · Revised October 25, 2026
