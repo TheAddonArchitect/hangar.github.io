@@ -18,11 +18,11 @@ This repository contains the **Hangar product website** hosted on GitHub Pages. 
 
 ### What the website includes
 
-- **Product overview** — an aviation-themed introduction and interactive workspace illustrations.
-- **Capabilities** — library organization, profiles, activation, flight preparation, scenery, weather, and tracking.
-- **Setup guidance** — system requirements, external connections, and a preflight workflow.
-- **Documentation** — a searchable flight manual, FAQs, and troubleshooting guidance.
-- **Responsive design** — desktop and mobile layouts, keyboard-accessible controls, and reduced-motion support.
+- **Product overview** - an aviation-themed introduction and interactive workspace illustrations.
+- **Capabilities** - library organization, profiles, activation, flight preparation, scenery, weather, and tracking.
+- **Setup guidance** - system requirements, external connections, and a preflight workflow.
+- **Documentation** - a searchable flight manual, FAQs, and troubleshooting guidance.
+- **Responsive design** - desktop and mobile layouts, keyboard-accessible controls, and reduced-motion support.
 
 > **Feature scope:** Application information reflects the reviewed **Hangar 0.7.0** source and documentation. This is not a statement that 0.7.0 is the latest public release. Logbooks, landing statistics, and virtual airline integrations are identified as planned concepts.
 
